@@ -1,48 +1,290 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Storymap</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparing Tuberculosis in North and South America</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="The major cities in Oregon"/>
+    <meta property="og:url" content="http://geoviz.ceoas.oregonstate.edu/storymap/examples/2.5/video.html"/>
+    <meta property="og:description" content="This is an example of a storymap."/>
+    <meta property="og:image" content="../../img/social.png"/>
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--leaflet css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"/>
-    <style>
-        /*full screen the map*/
-        html {
-            height: 100%;
-        }
 
-        body {
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
 
-        #map {
-            width: 100%;
-            height: 100%;
-        }
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
 
-    </style>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="css/storymap.2.5.css">
+    <!--add required libraries-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!--boostrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--leaflet.ajax for asynchronously adding geojson data-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+    <!--story map plugin-->
+    <script src="js/storymap.2.5.js"></script>
 </head>
 <body>
-<div id='map'></div>
+
+<div id="storymap" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 storymap-story">
+            <section data-scene="overview" data-background="assets/CDC-TB.mp4">
+                <div class="fullscreen text-center">
+
+                    <h1 class="display-4 d-flex justify-content-center">Comparing Tuberculosis in North and South America</h1>
+
+
+                    <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">This story map
+                        illustrates the differences in Tuberculosis rates between
+                        North and South America to explain why TB is still an issue Today
+                        despite current technological advancements.
+                    </small>
+                </div>
+            </section>
+            <section data-scene="2018">
+                <h2>Comparing Modern TB Rates (per 100,000)</h2>
+                <p>As shown from the map, countries from North America tend to have very low cases of Tuberculosis
+                    whereas countries from South America will average on higher. Peru in particular has and incident
+                    rate of 128 per 100,000 people among its citizenship.</p>
+                <p>This shows that Tuberculosis is not a concern for countries that are developed, but tend to be more prevalent
+                  in countries that are still developing. Developing countries suffer from more cases of TB because
+                    the level of their health care system is not equipped enough to treat everyone in the country.</p>
+            </section>
+
+            <section data-scene="2000">
+                <h2>Tuberculosis 20 Years Ago</h2>
+                <p>Even 20 years ago, Tuberculosis was still an issue for developing countries in South America while developed countries in North America
+                    were just as unconcerned with the disease as they are today. So that begs the question, if North America has already solved its Tuberculosis
+                    issue, then why do they not help South America with their Tuberculosis issue.</p>
+                <p>The answer is in fact more complex than a simple helping hand that North America could give to its South counterpart.
+                    In the year 2000, Neoliberal globalization policies were becoming the norm among many developed nations.
+                    As a result, health loans were not going to be given to developing countries in South America unless
+                    they received proper compensation back and proof that they could use the money to develop a proper health care system.</p>
+            </section>
+
+            <section data-scene="funding">
+                <h2>Funding going into TB (per million)</h2>
+                <p>As shown by this map, not only is the US one of the countries spending the most to counteract TB, but Peru is also one of those countries
+                    as well. That's right, America in 2018, spent about US$135 million on Tuberculosis alone whereas Peru spent
+                    an even higher US$141 million on the disease. Peru has actually spent more money on Tuberculosis than the US who has
+                    much higher capital than Peru.</p>
+                <p>Yet, on this list of 5 countries, Peru has the highest incidence rate of Tuberculosis among them even though it is spending as much money as
+                    one of the highest grossing nations in the world. And the results show in the data from the first two maps in that Peru was able to reduce the number of its cases
+                    by nearly 60.</p>
+            </section>
+
+            <section data-scene="doctors">
+                <h2>Number of Doctors in each Country (per 10,000)</h2>
+                <p>As this map shows, it reveals the differing approach that can be taken to combat against Tuberculosis and reduce
+                    the incidence rate of the the disease through the number opf doctors they employ. In the North American countries, there tends to be a middling number of
+                    doctors as the need for medical treatment isn't as severe as the past. In South America, however, the number of doctors tends to vary among the three
+                    countries that were chosen for this project.</p>
+                <p>The most notable is that Argentina has a high number of doctors per 10,000 people compared to Brazil and Peru.
+                    Remember to the first two maps how in the span of two decades, Argentina was able to educe the number of incidences
+                    by a significant margin as well. Even though it dpends much less to combat Tuberculosis, it was able to reduce cases from
+                    38 to 27 in nearly two decades.</p>
+                <p>Brazil, on the other hand, has not only few doctors, but also few health expenditures going towards TB treatment.
+                    As a result, Brazil has had little to no change in the number of TB cases that it gets each year since 2000.
+                    This lack of development in either department has stagnated Brazil's development against the disease compared to Peru and Argentina.
+            </section>
+            <section data-scene="percent">
+                <h2>Percentage of GDP used for Health Expenditure</h2>
+                <p>This last map will reveal how overall health expenditures are made in each country. As shown by the United States,
+                    not only do they spend the most out of the five countries shown here, the country also spends
+                    the second most to combat Tuberculosis.</p>
+                <p>On the other hand, Peru spends the least percentage of their GDP on health expenditures preferring to spend it on other things such as their economy.
+                    Yet they are also the highest spender on TB treatment which means, that a large majority of their health expenditures
+                    goes towards treating TB.</p>
+            </section>
+
+            <section data-scene="conclusion">
+                <h2>In Conclusion</h2>
+                <p>It is no surprise that developed countries from North America suffer little to no cases of Tuberculosis.
+                    They have already reached a point with their health care systems that they don't have to worry about bacterial diseases
+                    such as TB. They spend whatever amount they feel like against TB because they have the money and resources to spread out among
+                    all of their expenditures.</p>
+                <p>The real surprise of this project comes from analyzing developing countries from South America. One would assume
+                    that they would have not as much money to spend to treat TB and that they do not have enough doctors to treat
+                    the disease. The reality is that each country is handling TB differently that allows them to combat against it.
+                    Peru spends high amounts of money which has helped reduce the overall number of cases in the past 20 years and Argentina
+                    has also reduced its number of cases by employing and training as many doctors as it can. The most interesting thing
+                    these maps revealed is that Brazil, despite being the largest of the three countries and the most populous, has stagnated
+                    in its treatment of Tuberculosis. It has spent little money to actively prevent it and has not trained as many doctors
+                    leading to Tuberculosis's continued persitence.</p>
+                <p>Developing countries are capable of fighting against Tuberculosis just like developed countries. The key to fighting against
+                    the disease is by either providing more funding towards health expenditures for the developing country or by training more individuals
+                    to be skilled to treat diseases. If I were to choose either one, I believe the most cost effective method for the world and to help everyone
+                    reach equal health rights is through the continued teaching of medicinal skills.
+            </section>
+
+            <section data-scene="end" data-background="assets/Doctor-Handshake.jpg">
+                <div class="fullscreen text-center">
+                    <h1 class="display-4 d-flex justify-content-center">Thanks for watching!!!</h1>
+                    <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">Credit for data goes to the World Health Organization
+                    </small>
+                </div>
+            </section>
+
+        </div>
+        <!--map div-->
+        <div class="col-sm-6 col-md-8 storymap-map"></div>
+    </div>
+
+
+    <dl>
+        <dt>
+            <!--github icon-->
+            <a class="fab fa-github btn" href="https://github.com/dsnguon-1541830/Tuberculosis-Storymap" style="top:40px"
+               target="_blank"></a>
+        </dt>
+        <dt>
+            <!--info icon-->
+            <i class="fas fa-info-circle btn" style="top:60px" data-toggle="modal" data-target="#info-modal"></i>
+        </dt>
+    </dl>
+
+    <!--the info page-->
+    <div class="modal fade" id="info-modal" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This is a web choloropeth map comparing Tuberculosis circumstances between major countries from North and South AMerica.
+                        It is used as a project for the Geography department at the University of Washington
+                        The story map library is derived from the storymap plugin for leaflet at <a>http://atlefren.github.io/storymap/</a>,
+                        and its functionality relies on both leaflet and Boostrap.</p>
+                    <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.5 | MIT License </p>
+                    <p><b>Author: Darren Snguon</b> | Undergraduate Student of Geography | University of Washington
+                    </p>
+                    <p>The data about Tuberculosis and Health Expenditures was gathered from the World Health Organization.</p>
+                    <p>The <a href="https://www.youtube.com/watch?v=UKV8Zn7x0wM">background video</a> on the front page
+                        was clipped from Youtube. </p>
+                    <p>This story map uses geospatial data from cartoDB and ESRI.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- main javascript -->
 <script type="text/javascript">
 
-    var map = L.map('map', {
-      center: [40, -95.0],
-    zoom: 4,
-    maxZoom: 7,
-    minZoom: 2,
+
+    // Create Legend Contents in html format
+    var tb_legend = '<i style="background: red; opacity: 0.1"></i><p><b>0-33</b></p><i style="background: red; opacity: 0.4"></i><p><b>34-66</b></p><i style="background: #8B0000; opacity: 0.6"></i><p><b>67-99</b></p><i style="background: #8B0000; opacity: 0.9"></i><p><b>100+</b></p>';
+    var fund_legend = '<i style="background: green; opacity: 0.05"></i><p><b>$3-31</b></p><i style="background: green; opacity: 0.3"></i><p><b>$32-58</b></p><i style="background: green; opacity: 0.8"></i><p><b>$59-86</b></p><i style="background: #006400; opacity: 1.3"></i><p><b>100+</b></p>';
+    var doctor_legend = '<i style="background: blue; opacity: 0.05"></i><p><b>13-18</b></p><i style="background: blue; opacity: 0.2"></i><p><b>19-23</b></p><i style="background: blue; opacity: 0.5"></i><p><b>24-32</b></p><i style="background: #0000A0; opacity: 0.8"></i><p><b>33-40</b></p>';
+    var gdp_legend = '<i style="background: green; opacity: 0.05"></i><p><b>5-8%</b></p><i style="background: green; opacity: 0.3"></i><p><b>8-10%</b></p><i style="background: green; opacity: 0.8"></i><p><b>10-13%</b></p><i style="background: #006400; opacity: 1.3"></i><p><b>13-18%</b></p>';
+
+    // For each layer, the first variable is the layer, the second is the legend. The layer variable can be any kinds of layers that leaflet.js supports.
+    // var layers = {
+    //      layer1: {layer: layer1, legend: legend1},
+    //      layer2: {layer: layer2, legend: legend2}
+    //      ...
+    // }
+
+    var layers = {
+        TB_2018: {layer: L.tileLayer('TB_2018/{z}/{x}/{y}.png', {
+                            attribution: 'Generated by QMetaTiles',
+                            tms: false,
+                            detectRetina: false
+                          }),
+                          legend: tb_legend},
+        TB_Funds: {
+            layer: L.tileLayer('Fund/{z}/{x}/{y}.png', {
+                                attribution: 'Generated by QMetaTiles',
+                                detectRetina: false
+                              }),
+            legend: fund_legend
+        },
+        TB_2000: {
+            layer: L.tileLayer('TB_2000/{z}/{x}/{y}.png', {
+                                attribution: 'Generated by QMetaTiles',
+                                detectRetina: false
+                              }),
+            legend: tb_legend
+        },
+        GDP: {
+            layer: L.tileLayer('GDP/{z}/{x}/{y}.png', {
+                                attribution: 'Generated by QMetaTiles',
+                                detectRetina: false
+                              }),
+            legend: gdp_legend
+        },
+        Doctor: {
+            layer: L.tileLayer('doctors/{z}/{x}/{y}.png', {
+                                attribution: 'Generated by QMetaTiles',
+                                detectRetina: false
+                              }),
+            legend: doctor_legend
+        },
+        cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')}
+    };
+
+    var scenes = {
+        overview: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'Cover Page', layers: []},
+        2018: {lat: 45.5186089, lng: -122.7270297, zoom: 0, name: '2018', layers: [layers.TB_2018]},
+        2000: {lat: 44.5701158, lng: -123.2949388, zoom: 0, name: '2000', layers: [layers.TB_2000]},
+        funding: {lat: 44.0549563, lng: -123.0958048, zoom: 0, name: 'funding', layers: [layers.TB_Funds]},
+        doctors: {lat: 44.9419055, lng: -123.0356407, zoom: 0, name: 'doctors', layers: [layers.Doctor]},
+        percent: {lat: 44.0519385, lng: -121.3042125, zoom: 0, name: 'percent', layers: [layers.GDP]},
+        conclusion: {lat: 44.0000000, lng: -123.5000000, zoom: 0, name: 'conclusion'},
+        end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
+    };
+
+    $('#storymap').storymap({
+        scenes: scenes,
+        baselayer: layers.cartodb_light,
+        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        credits: "",
+        loader: true,
+        scalebar: false,
+        fly: true,
+        navwidget: true,
+
+        createMap: function () {
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map($(".storymap-map")[0], {
+                zoomControl: false, scrollWheelZoom: false, fadeAnimation: true,
+                zoomAnimation: true
+            }).setView([44, -120], 7);
+
+            //add an miniglobe
+            // new L.Control.GlobeMiniMap({
+          //      marker: 'red',
+            //    position: 'bottomright'
+            //}).addTo(map);
+
+
+            return map;
+        }
     });
-
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png').addTo(map);
-
-    L.tileLayer('Tiles/{z}/{x}/{y}.png', {
-        attribution: 'Generated by QMetaTiles',
-        detectRetina: false
-    }).addTo(map);
-
 </script>
 </body>
 </html>
