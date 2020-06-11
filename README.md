@@ -1,1 +1,20 @@
-# Tuberculosis-Storymap
+# The Persistence of Tuberculosis Storymap
+Tuberculosis, or TB, is a disease that usually attacks the lungs, but they can also damage other parts of the body which can lead to death. In the past about a couple centuries, Tuberculosis killed more people than any other disease in the world. Today, Tuberculosis is now known as the leading killer of people who are HIV-positive and one of ten highest causes of death around the world. Yet, many people from wealthy households are unconcerned with the disease that has such a high mortality rate. How is it that a disease considered inconsequential to one country can be such a huge problem for another nation entirely? Why does Tuberculosis continue to persist when advancements in medicine have already created treatments for it? This project aims to explain and represent how Tuberculosis persists in the world despite the numerous technological and medical advancements already developed. This project was made using the Storymap javascript library and the maps were created in QGIS using data gathered from the World Health Organization.
+
+- The first map compares modern TB rates between the countries with an associated legend
+- The second map compares TB rates of the countries from the year 2000 and explains how TB rates have changed over time
+- The third map shows the amount of funding each country spends on TB per million each year and how that has affected TB rates over the years
+- The fourth map talks about the number of doctors in each country and how that has affected TB rates over the years
+- The fifth and final map shows the percentage of GDP used for health expenditure to show how much each country cares about treating health
+- The next scene of the storymap is teh conclusion which analyzes the overall data to explain TB's persistence, but also the best path that is needed to treat it
+- The storymap ends with a credit scene thanking the viewer for taking their time to read the storymap
+
+This project is being hosted by Github, a code hosting platform for version control and collaboration. It lets anyone work together on projects from anywhere. It also allows people to create and host both personal websites (one allowed per user) and websites related to specific GitHub projects.
+
+As for the internal code of the project, it uses html, css, and javascript to form the interface of the website. It gets its css and javascript from the *storymap.js* javascript library. The *index.html* file links to the location of the *storymap.js* and *storymap.css* files of the most recent build, in this case being version 2.5. The storymap javascript library uses leaflet and bootstrap to provide the javascript and css of the project. Leaflet is an open-source JavaScript library for interactive web maps. It's lightweight, simple, and flexible, and is probably the most popular open-source mapping library at the moment. It is capable of converting data to map layers and mouse interactions working well with almost all devices. It can add tilemaps and basemaps to a website that visitors can interact with. Storymap uses leaflet for the interactive javascript which creates the maps and other graphics of the website. Bootstrap is a free front-end framework for easy web development. Bootstrap creates easy to understand website templates for people to use to make their websites with. Storymap uses bootstrap to form the easy to make scenes and info cards found within the project.
+
+The tilemaps found in the project were created using QGIS, a GIS software capable of creating geospatial data. The data of the maps were made thanks to data found from the [World Health Organization](https://www.who.int/) website. After the geospatial data was created, it was converted into the tilemaps found within the project to represent the maps found in each scene. The video and image assets were found searching on YouTube and Google to fit a title and end scene for the storymap project. The basemap used for the generated tiles are created using Mapbox.
+
+Author: Darren Snguon | Undergraduate Student of Geography | University of Washington
+
+The data about Tuberculosis and Health Expenditures was gathered from the World Health Organization.
